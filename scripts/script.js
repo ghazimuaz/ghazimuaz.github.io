@@ -11,6 +11,3 @@ profile.addEventListener('mouseleave', () => {
     cursor.removeImg()
 });
 
-downloadBtn.addEventListener('mouseenter', () => {
-    cursor.setState('.-lg')
-});
