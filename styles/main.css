@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'AP-Regular';
+    src: url('../assets/fonts/Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AP-Medium';
+    src: url('../assets/fonts/Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AP-Bold';
+    src: url('../assets/fonts/Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --white: #F2F3F4;
+    --black: #181818;
+    --orange: #FF631C;
+    --title: #B9BABF;
+    --para: #5A5A5B;
+    --nav-no-focus: rgba(242, 243, 244, 0.60);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    user-select: none;
+}
+
+
+body {
+    background-color: var(--white);
+}
+
+#main-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+#backdrop {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -999;
+}
+
+
+#content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+#intro-content {
+    width: 55.5%;
+    display: grid;
+    row-gap: 40px;
+}
+
+
+#title {
+    font-family: 'AP-Medium';
+    color: var(--title);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#description {
+    font-family: 'AP-Regular';
+    color: var(--black);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#cta-container {
+    margin-top: 65px;
+    display: grid;
+    row-gap: 25px;
+}
+
+#download-btn {
+    width: 320px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'AP-Bold';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    color: var(--orange);
+    background-color: var(--white);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#hire-btn {
+    width: 320px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'AP-Bold';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 20px;
+    cursor: pointer;
+}
