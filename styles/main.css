@@ -1,3 +1,5 @@
+/* Fonts Setup */
+
 @font-face {
     font-family: 'AP-Regular';
     src: url('../assets/fonts/Regular.woff') format('woff');
@@ -19,6 +21,8 @@
     font-style: normal;
 }
 
+/* Colors Setup */
+
 :root {
     --white: #F2F3F4;
     --black: #181818;
@@ -27,6 +31,8 @@
     --para: #5A5A5B;
     --nav-no-focus: rgba(242, 243, 244, 0.60);
 }
+
+/* Set Defaults */
 
 * {
     margin: 0;
@@ -42,7 +48,11 @@ a {
 
 body {
     background-color: var(--white);
+    overflow: hidden;
 }
+
+
+/* Fixed Style Items */
 
 #main-wrapper {
     width: 100%;
@@ -58,39 +68,8 @@ body {
 }
 
 
-#content-wrapper {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-content: center;
-    justify-items: center;
-}
-
-#intro-content {
-    width: 55.5%;
-    display: grid;
-    row-gap: 40px;
-}
-
-
-#title {
-    font-family: 'AP-Medium';
-    color: var(--title);
-    text-align: center;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-#description {
-    font-family: 'AP-Regular';
-    color: var(--black);
-    text-align: center;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.not-top {
+    margin-top: 35px;
 }
 
 #cta-container {
@@ -204,7 +183,7 @@ body {
     justify-content: center;
 }
 
-#footer-content > p {
+#footer-content>p {
     font-family: 'AP-Regular';
     color: var(--white);
     font-size: 13px;
@@ -213,14 +192,168 @@ body {
     line-height: normal;
 }
 
-#footer-content > p > a {
+#footer-content>p>a {
     text-decoration: underline !important;
-    
+
 }
 
 .footer-dot {
-    width:5px;
+    width: 5px;
     height: 5px;
     border-radius: 50%;
     background-color: var(--white);
+}
+
+/* Home Page */
+
+#content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+#intro-content {
+    width: 55.5%;
+    display: grid;
+    row-gap: 40px;
+}
+
+
+#title {
+    font-family: 'AP-Medium';
+    color: var(--title);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#description {
+    font-family: 'AP-Regular';
+    color: var(--black);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+/* About Page */
+
+#about-outer-wrapper {
+    width: 100%;
+    height: 580px;
+    margin-top: 115px;
+    overflow: scroll;
+    scrollbar-width: none;
+    display: grid;
+    align-content: top;
+    justify-items: center;
+    padding-bottom: 105px;
+    padding-top: 40px;
+}
+
+#about-content {
+    width: 68.75%;
+    display: grid;
+    row-gap: 100px;
+}
+
+#about-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+}
+
+.section-title {
+    font-family: 'AP-Medium';
+    font-size: 64px;
+    color: var(--title);
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+}
+
+.section-para {
+    width: 66.3%;
+    font-family: 'AP-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--black);
+}
+
+#exp-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+}
+
+.listed-content {
+    width: 66.3%;
+    height: auto;
+}
+
+.title-sm {
+    font-family: 'AP-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--black);
+}
+
+.details-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5px;
+    align-items: center;
+    justify-content: start;
+    margin-top: 5px;
+}
+
+.details-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--para);
+}
+
+.details-container>p {
+    font-family: 'AP-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--para);
+}
+
+.content-list {
+    margin-top: 15px;
+    font-family: 'AP-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--black);
+    list-style-type: none;
+}
+
+.content-list > li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#ts-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
 }
