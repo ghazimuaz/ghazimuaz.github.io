@@ -67,6 +67,12 @@ body {
     z-index: -999;
 }
 
+.aligner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .not-top {
     margin-top: 35px;
@@ -345,7 +351,7 @@ body {
     list-style-type: none;
 }
 
-.content-list > li {
+.content-list>li {
     margin: 15px 0;
     display: flex;
     align-items: center;
@@ -356,4 +362,106 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: normal;
+}
+
+/* Projects Page */
+
+#projects-outer-wrapper {
+    width: 100%;
+    height: 580px;
+    margin-top: 115px;
+    overflow: scroll;
+    scrollbar-width: none;
+    display: grid;
+    align-content: top;
+    justify-items: center;
+    padding-bottom: 105px;
+    padding-top: 40px;
+}
+
+#projects-content {
+    width: 68.75%;
+    display: grid;
+    row-gap: 45px;
+}
+
+#projects-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: normal;
+}
+
+.page-title {
+    font-family: 'AP-Medium';
+    font-size: 64px;
+    color: var(--title);
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+}
+
+#projects-list-wrapper {
+    display: grid;
+    row-gap: 15px;
+}
+
+#project-container {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 65px 3fr 1fr 65px;
+}
+
+.project-num {
+    font-family: 'AP-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--para);
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.project-title {
+    font-family: 'AP-Regular';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--black);
+}
+
+.pub-details {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5px;
+    align-items: center;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.pub-details>p {
+    font-family: 'AP-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--para);
+}
+
+.pub-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--para);
+}
+
+.project-img {
+    background-color: yellow;
 }
