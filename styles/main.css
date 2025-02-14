@@ -463,15 +463,9 @@ body {
 }
 
 .project-img {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
+    background-color: yellow;
 }
 
-.tch {
-    background: url('/assets/img/TCH.png');
-}
 
 /* Contact Page */
 
