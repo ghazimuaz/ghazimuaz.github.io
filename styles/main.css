@@ -482,7 +482,7 @@ body {
 #links-wrapper {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     column-gap: 25px;
     align-content: center;
     justify-items: center;
