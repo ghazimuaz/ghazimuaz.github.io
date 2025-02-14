@@ -213,11 +213,6 @@ body {
     line-height: normal;
 }
 
-#footer-content > p > a {
-    text-decoration: underline !important;
-    
-}
-
 .footer-dot {
     width:5px;
     height: 5px;
