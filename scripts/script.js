@@ -1,5 +1,5 @@
 const cursor = new MouseFollower();
-const profile = document.getElementById('title');
+const profile = document.getElementById('main-title');
 const downloadBtn = document.getElementById('download-btn');
 const HireBtn = document.getElementById('hire-btn');
 

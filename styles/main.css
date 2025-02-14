@@ -227,7 +227,7 @@ body {
 }
 
 
-#title {
+#main-title {
     font-family: 'AP-Medium';
     color: var(--title);
     text-align: center;
@@ -464,4 +464,25 @@ body {
 
 .project-img {
     background-color: yellow;
+}
+
+/* Contact Page */
+
+#title {
+    font-family: 'AP-Medium';
+    color: var(--title);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#links-wrapper {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 25px;
+    align-content: center;
+    justify-items: center;
 }
