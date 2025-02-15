@@ -1,6 +1,6 @@
-if(navigation.addEventListener) {
+if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
-        if(!event.destination.url.includes(document.location.origin)) {
+        if (!event.destination.url.includes(document.location.origin)) {
             return;
         }
         event.intercept({
@@ -8,7 +8,7 @@ if(navigation.addEventListener) {
                 const response = await fetch(event.destination.url);
                 const text = await response.text();
 
-                const transition = document.startViewTransition(() =>{
+                const transition = document.startViewTransition(() => {
                     const body = text.match(/<body[^>]*>([\s\S]*)<\/body>/i)[1];
                     document.body.innerHTML = body;
 
@@ -20,7 +20,7 @@ if(navigation.addEventListener) {
                     window.scrollTo(0, 0);
                 });
             },
-                scroll: "manual",
+            scroll: "manual",
         });
     });
 }
