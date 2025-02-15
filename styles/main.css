@@ -60,7 +60,7 @@ body {
         transform: translateY(0);
     }
     to {
-        opacity: 0.5;
+        opacity: 0;
         transform: translateY(-35%);
     }
 }
@@ -72,6 +72,14 @@ body {
     to {
         clip-path: polygon(0% 100%,100% 100%,100% 0%,0% 0%);
     }
+}
+
+::view-transition-old(root) {
+    animation: 1.5s cubic-bezier(0.87,0,0.13,1) both moveout;
+}
+
+::view-transition-new(root) {
+    animation: 1.5s cubic-bezier(0.87,0,0.13,1) both movein;
 }
 
 
