@@ -22,5 +22,5 @@ if(navigation.addEventListener) {
             },
                 scroll: "manual",
         });
-    })
+    });
 }
