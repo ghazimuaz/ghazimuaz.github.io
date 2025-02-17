@@ -1,7 +1,4 @@
-// function navtransition() {
-//     const nav = document.getElementById('navbar-wrapper');
 
-// };
 
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
