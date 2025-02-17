@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Check if the loader has already been shown
+    if (localStorage.getItem('loaderShown') === 'true') {
+        return;
+    }
+
     var loaderWrapper = document.getElementById('loader-wrapper');
     var loader = document.getElementById('loader');
     var images = document.images;
@@ -21,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Use GSAP to animate the loader-wrapper's opacity
                     gsap.to(loaderWrapper, { opacity: 0, duration:0.5, onComplete: function() {
                         loaderWrapper.style.display = 'none';
+                        // Set the flag in localStorage to indicate the loader has been shown
+                        localStorage.setItem('loaderShown', 'true');
                     }});
                 }});
             }, 200); // 500ms delay
