@@ -12,9 +12,9 @@ profile.addEventListener('mouseleave', () => {
 });
 
 downloadBtn.addEventListener('mouseenter', () => {
-    cursor.setState('-lg')
+    cursor.setClass('-lg')
 });
 
 downloadBtn.addEventListener('mouseleave', () => {
-    cursor.removeState('-lg')
+    cursor.removeClass('-lg')
 });
