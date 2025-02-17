@@ -1,5 +1,3 @@
-
-
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
         if (!event.destination.url.includes(document.location.origin)) {
