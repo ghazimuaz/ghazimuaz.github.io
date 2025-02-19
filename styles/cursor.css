@@ -18,13 +18,14 @@
     width: 48px;
     height: 48px;
     transform: scale(0.2);
-    background: currentColor;
+    background: var(--orange);
     border-radius: 50%;
     transition: transform .25s ease-in-out, opacity .1s
 }
 
 .mf-cursor.-inverse {
-    color: #fff
+    color: #fff !important;
+    border-color: #fff !important;
 }
 
 @supports(mix-blend-mode: exclusion) {
@@ -58,7 +59,7 @@
 }
 
 .mf-cursor.-lg:before {
-    transform: scale(1.5)
+    transform: scale(1.2)
 }
 
 .mf-cursor.-icon:before {
