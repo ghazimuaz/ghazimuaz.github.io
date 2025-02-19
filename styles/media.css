@@ -446,9 +446,9 @@
     background-color: var(--para);
 }
 
-.project-img {
-    display: none;
-    background-image: linear-gradient(75deg ,var(--orange), var(--black));
+.aligner > svg {
+    width: 42px;
+    height: 42px;
 }
 
 /* Contact Page */
