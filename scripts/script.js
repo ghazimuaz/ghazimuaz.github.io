@@ -1,17 +1,22 @@
+
 function showLoaderIfFontsNotLoaded() {
     const loaderWrapper = document.getElementById('loader-wrapper');
-    if (!document.fonts.check('1em AP-Regular')) {
-        gsap.to(loaderWrapper, { display: 'block', opacity: 1, duration: 0.5 });
-        document.fonts.ready.then(() => {
-            gsap.to(loaderWrapper, { opacity: 0, duration: 0.5, onComplete: () => {
-                loaderWrapper.style.display = 'none';
-            }});
-        });
-    } else {
+    const hideLoader = () => {
         gsap.to(loaderWrapper, { opacity: 0, duration: 0.5, onComplete: () => {
             loaderWrapper.style.display = 'none';
         }});
+    };
+
+    if (!document.fonts.check('1em AP-Regular')) {
+        gsap.to(loaderWrapper, { display: 'block', opacity: 1, duration: 0.5 });
+        document.fonts.ready.then(hideLoader);
+    } else {
+        hideLoader();
     }
+
+    // window.addEventListener('focus', () => {
+    //     setTimeout(hideLoader, 200); // Adjust the timeout duration as needed
+    // });
 }
 
 showLoaderIfFontsNotLoaded();

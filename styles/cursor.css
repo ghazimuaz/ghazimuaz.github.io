@@ -86,6 +86,7 @@
     transform: scale(0) rotate(10deg);
     opacity: 0;
     color: #fff;
+    font-family: 'AP-Regular';
     font-size: 16px;
     line-height: 20px;
     text-align: center;
