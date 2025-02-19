@@ -446,6 +446,13 @@
     background-color: var(--para);
 }
 
+.outside-link {
+    opacity: 1;
+    position: relative;
+    left: 0;
+    transform: rotate(0deg);
+}
+
 .aligner > svg {
     width: 42px;
     height: 42px;
