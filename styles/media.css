@@ -227,14 +227,14 @@
 
 #about-outer-wrapper {
     width: 100%;
-    height: calc(100vh - 150px);
+    height: 550px;
     margin-top: 75px;
     overflow: scroll;
     scrollbar-width: none;
     display: grid;
     align-content: top;
     justify-items: center;
-    padding-bottom: 105px;
+    padding-bottom: 145px;
     padding-top: 20px;
 }
 
