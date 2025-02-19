@@ -41,6 +41,12 @@
     transform: scale(0.15)
 }
 
+.mf-cursor.-hallow:before {
+    background: none;
+    border: 2px solid var(--orange);
+
+}
+
 .mf-cursor.-text:before {
     opacity: .85;
     transform: scale(1.7)
