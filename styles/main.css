@@ -542,6 +542,19 @@ body {
     background-color: var(--para);
 }
 
+.outside-link {
+    opacity: 0;
+    position: relative;
+    left: -50px;
+    transform: rotate(45deg);
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0.1s;
+}
+
+#project-container:hover .outside-link {
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+}
 
 /* Contact Page */
 
