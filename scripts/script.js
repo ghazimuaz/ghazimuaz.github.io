@@ -1,3 +1,21 @@
+function showLoaderIfFontsNotLoaded() {
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    if (!document.fonts.check('1em AP-Regular')) {
+        gsap.to(loaderWrapper, { display: 'block', opacity: 1, duration: 0.5 });
+        document.fonts.ready.then(() => {
+            gsap.to(loaderWrapper, { opacity: 0, duration: 0.5, onComplete: () => {
+                loaderWrapper.style.display = 'none';
+            }});
+        });
+    } else {
+        gsap.to(loaderWrapper, { opacity: 0, duration: 0.5, onComplete: () => {
+            loaderWrapper.style.display = 'none';
+        }});
+    }
+}
+
+showLoaderIfFontsNotLoaded();
+
 
 document.addEventListener("DOMContentLoaded", () => {
     var cursor = new MouseFollower();
@@ -26,6 +44,7 @@ if (navigation.addEventListener) {
                 transition.ready.then(() => {
                     window.scrollTo(0, 0);
                     var cursor = new MouseFollower();
+                    showLoaderIfFontsNotLoaded();
                 });
             },
             scroll: "manual",
