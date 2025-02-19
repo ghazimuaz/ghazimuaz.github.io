@@ -1,3 +1,10 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+    var cursor = new MouseFollower();
+});
+
+// Transitions Related Code
+
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
         if (!event.destination.url.includes(document.location.origin)) {
@@ -18,6 +25,7 @@ if (navigation.addEventListener) {
 
                 transition.ready.then(() => {
                     window.scrollTo(0, 0);
+                    var cursor = new MouseFollower();
                 });
             },
             scroll: "manual",

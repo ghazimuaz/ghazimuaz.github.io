@@ -223,6 +223,34 @@ body {
     transform: translateX(-50%);
 }
 
+.nav-hover-effect{
+    overflow: hidden;
+}
+
+.nav-hover-effect a {
+    overflow: hidden;
+    height: 1em;
+    color: var(--nav-no-focus);
+}
+
+.nav-hover-effect a span {
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.nav-hover-effect a span::before {
+    color: var(--white);
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    transform: translate3d(0, 0, 0);
+}
+
+.nav-hover-effect a:hover span {
+    transform: translateY(-100%);
+}
+
 #footer-wrapper {
     position: fixed;
     bottom: 20px;
