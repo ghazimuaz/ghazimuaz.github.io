@@ -542,10 +542,6 @@ body {
     background-color: var(--para);
 }
 
-.project-img {
-    background-image: linear-gradient(75deg ,var(--orange), var(--black));
-}
-
 
 /* Contact Page */
 
