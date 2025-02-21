@@ -33,6 +33,13 @@ if (navigation.addEventListener) {
         if (!event.destination.url.includes(document.location.origin)) {
             return;
         }
+
+        // Check if the link contains the 'download' attribute
+        const link = event.target.closest('a');
+        if (link && link.hasAttribute('download')) {
+            return;
+        }
+
         event.intercept({
             handler: async () => {
                 const response = await fetch(event.destination.url);
