@@ -30,15 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
-        if (!event.destination.url.includes(document.location.origin)) {
-            return;
-        }
 
         // Check if the link contains the 'download' attribute
         const link = event.target.closest('a');
         if (link && link.hasAttribute('download')) {
             return;
         }
+
+        if (!event.destination.url.includes(document.location.origin)) {
+            return;
+        }
+
+        
 
         event.intercept({
             handler: async () => {
