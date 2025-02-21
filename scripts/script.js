@@ -41,8 +41,6 @@ if (navigation.addEventListener) {
             return;
         }
 
-        
-
         event.intercept({
             handler: async () => {
                 const response = await fetch(event.destination.url);
