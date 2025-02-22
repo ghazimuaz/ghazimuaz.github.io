@@ -14,9 +14,6 @@ function showLoaderIfFontsNotLoaded() {
         hideLoader();
     }
 
-    // window.addEventListener('focus', () => {
-    //     setTimeout(hideLoader, 200); // Adjust the timeout duration as needed
-    // });
 }
 
 showLoaderIfFontsNotLoaded();
