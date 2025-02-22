@@ -27,12 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
-
-        const link = event.target instanceof Element ? event.target.closest('a') : null;
-        if (link && link.hasAttribute('download')) {
+        const link = event.target && event.target instanceof Element ? event.target.closest('a') : null;
+        if (link && (link.hasAttribute('download') || link.textContent.includes('Download Resume'))) {
             return;
         }
-        
 
         if (!event.destination.url.includes(document.location.origin)) {
             return;
