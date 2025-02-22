@@ -2,9 +2,11 @@
 function showLoaderIfFontsNotLoaded() {
     const loaderWrapper = document.getElementById('loader-wrapper');
     const hideLoader = () => {
-        gsap.to(loaderWrapper, { opacity: 0, duration: 0.5, onComplete: () => {
-            loaderWrapper.style.display = 'none';
-        }});
+        gsap.to(loaderWrapper, {
+            opacity: 0, duration: 0.5, onComplete: () => {
+                loaderWrapper.style.display = 'none';
+            }
+        });
     };
 
     if (!document.fonts.check('1em AP-Regular')) {
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
+
         const link = event.target && event.target instanceof Element ? event.target.closest('a') : null;
         if (link && (link.hasAttribute('download') || link.textContent.includes('Download Resume'))) {
             return;
