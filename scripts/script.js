@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
 
-        // Check if the link contains the 'download' attribute
-        const link = event.target.closest('a');
+        const link = event.target instanceof Element ? event.target.closest('a') : null;
         if (link && link.hasAttribute('download')) {
             return;
         }
