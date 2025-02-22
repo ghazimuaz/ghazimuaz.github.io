@@ -32,6 +32,7 @@ if (navigation.addEventListener) {
         if (link && link.hasAttribute('download')) {
             return;
         }
+        
 
         if (!event.destination.url.includes(document.location.origin)) {
             return;
