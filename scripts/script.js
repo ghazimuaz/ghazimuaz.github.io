@@ -51,6 +51,22 @@ function initAnim() {
     );
 
     gsap.fromTo(
+        '#description',
+        {
+            opacity: 0,
+            y: 50
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.4,
+            ease: 'power2.out'
+        },
+
+    );
+
+    gsap.fromTo(
         '#cta-container div',
         {
             opacity: 0,
@@ -179,7 +195,7 @@ function showLoaderIfFontsNotLoaded() {
     } else {
         hideLoader();
     }
-
+    
 }
 
 showLoaderIfFontsNotLoaded();
