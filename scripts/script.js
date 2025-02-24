@@ -1,3 +1,24 @@
+function initAnim(){
+    gsap.fromTo('#navbar-wrapper',{
+        opacity: 0,
+        y: 150
+    }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 0.8,
+        ease: 'power2.out'
+    });
+
+    gsap.fromTo('#footer-wrapper', {
+        opacity: 0
+    }, {
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+        ease: 'power2.out'
+    });
+}
 
 function showLoaderIfFontsNotLoaded() {
     const loaderWrapper = document.getElementById('loader-wrapper');
@@ -30,11 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
 if (navigation.addEventListener) {
     navigation.addEventListener("navigate", (event) => {
 
-        const link = event.target && event.target instanceof Element ? event.target.closest('a') : null;
-        if (link && (link.hasAttribute('download') || link.textContent.includes('Download Resume'))) {
-            return;
-        }
-
         if (!event.destination.url.includes(document.location.origin)) {
             return;
         }
@@ -56,6 +72,7 @@ if (navigation.addEventListener) {
                     window.scrollTo(0, 0);
                     var cursor = new MouseFollower();
                     showLoaderIfFontsNotLoaded();
+                    initAnim();
                 });
             },
             scroll: "manual",
