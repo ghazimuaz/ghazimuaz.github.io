@@ -1,23 +1,166 @@
-function initAnim(){
-    gsap.fromTo('#navbar-wrapper',{
-        opacity: 0,
-        y: 150
-    }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.8,
-        ease: 'power2.out'
-    });
 
-    gsap.fromTo('#footer-wrapper', {
-        opacity: 0
-    }, {
-        opacity: 1,
-        duration: 1,
-        delay: 0.5,
-        ease: 'power2.out'
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    var cursor = new MouseFollower();
+});
+
+
+function initAnim() {
+    // Animation for Navbar
+    gsap.fromTo(
+        '#navbar-wrapper',
+        {
+            opacity: 0,
+            y: 150
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: 0.8,
+            ease: 'power2.out'
+        }
+    );
+
+    // Animation for Footer
+    gsap.fromTo(
+        '#footer-wrapper',
+        {
+            opacity: 0
+        },
+        {
+            opacity: 1,
+            duration: 1,
+            delay: 0.5,
+            ease: 'power2.out'
+        }
+    );
+
+    // Animation for Home Page and Contact Page
+
+    gsap.fromTo(
+        '#title',
+        {
+            opacity: 0,
+        },
+        {
+            opacity: 1,
+            duration: 1,
+            delay: 1.2,
+            ease: 'power2.out',
+        }
+    );
+
+    gsap.fromTo(
+        '#cta-container div',
+        {
+            opacity: 0,
+            y: 50
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.4,
+            ease: 'power2.out',
+            stagger: 0.2
+        }
+    );
+
+    gsap.fromTo(
+        '.social-icon',
+        {
+            opacity: 0,
+        },
+        {
+
+            opacity: 1,
+            duration: 1,
+            delay: 1.8,
+            ease: 'power2.out',
+            stagger: 0.2
+        },
+    );
+
+
+    // Animation for About Page
+
+    var aboutTl = gsap.timeline;
+    aboutTl = gsap.timeline();
+
+    aboutTl.fromTo(
+        '.section-title',
+        {
+            opacity: 0,
+        },
+        {
+            opacity: 1,
+            duration: 1,
+            delay: 1,
+            ease: 'power2.out'
+        }
+    );
+
+    aboutTl.fromTo(
+        '.section-para',
+        {
+            opacity: 0,
+            x: 50
+        },
+        {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.out'
+        },
+        '-=0.5' // Overlap with the previous animation by 0.5 seconds
+    );
+
+    aboutTl.fromTo(
+        '.listed-content',
+        {
+            opacity: 0,
+            x: 50
+        },
+        {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.out',
+            stagger: 0.2
+        },
+        '-=0.5' // Overlap with the previous animation by 0.5 seconds
+    );
+
+    // Animation for Projects Page
+    gsap.fromTo(
+        '.page-title',
+        {
+            opacity: 0,
+        },
+        {
+            opacity: 1,
+            duration: 1,
+            delay: 1,
+            ease: 'power2.out'
+        }
+    );
+
+    gsap.fromTo(
+        '#project-container',
+        {
+            opacity: 0,
+            y: 50
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.2,
+            ease: 'power2.out',
+            stagger: 0.2
+        }
+    );
+
 }
 
 function showLoaderIfFontsNotLoaded() {
@@ -40,11 +183,6 @@ function showLoaderIfFontsNotLoaded() {
 }
 
 showLoaderIfFontsNotLoaded();
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    var cursor = new MouseFollower();
-});
 
 // Transitions Related Code
 

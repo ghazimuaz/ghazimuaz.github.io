@@ -73,16 +73,6 @@ body {
     }
 }
 
-@keyframes navbar-moveout {
-    from {
-        background: rgba(99, 99, 99, 0.60);    }
-    to {
-        background: red;
-    }
-}
-
-
-
 ::view-transition-old(root) {
     animation: 1.5s cubic-bezier(0.87,0,0.13,1) both moveout;
 }
@@ -91,9 +81,6 @@ body {
     animation: 1.5s cubic-bezier(0.87,0,0.13,1) both movein;
 }
 
-::view-transition-old(#navbar-wrapper) {
-    animation: 0.5s cubic-bezier(0.87,0,0.13,1) both navbar-moveout;
-}
 
 
 /* Fixed Style Items */
