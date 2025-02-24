@@ -1,9 +1,4 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-    var cursor = new MouseFollower();
-});
-
-
 function initAnim() {
     // Animation for Navbar
     gsap.fromTo(
@@ -199,6 +194,11 @@ function showLoaderIfFontsNotLoaded() {
 }
 
 showLoaderIfFontsNotLoaded();
+
+document.addEventListener("DOMContentLoaded", () => {
+    var cursor = new MouseFollower();
+    initAnim();
+});
 
 // Transitions Related Code
 
