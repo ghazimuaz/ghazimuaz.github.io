@@ -1,5 +1,19 @@
 
 function initAnim() {
+    // Animation for backdrop
+
+    gsap.fromTo(
+        '#backdrop',
+        {
+            opacity: 0
+        },
+        {
+            opacity: 1,
+            duration: 1,
+            ease: 'power2.out'
+        }
+    );
+
     // Animation for Navbar
     gsap.fromTo(
         '#navbar-wrapper',
