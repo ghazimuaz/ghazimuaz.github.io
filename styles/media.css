@@ -227,7 +227,7 @@
 
 #about-outer-wrapper {
     width: 100%;
-    height: calc(100vh - 270px);
+    height: 100%;
     margin-top: 75px;
     overflow: scroll;
     scrollbar-width: none;
