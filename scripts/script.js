@@ -191,7 +191,6 @@ function initAnim() {
 
 document.addEventListener("DOMContentLoaded", () => {
     var cursor = new MouseFollower();
-    //initAnim();
 });
 
 function showLoaderIfFontsNotLoaded() {
