@@ -100,7 +100,7 @@
         width: 90%;
         height: 60px;
         position: absolute;
-        z-index: 999;
+        z-index: 999 !important;
         bottom: 55px;
         left: 50%;
         transform: translateX(-50%);
