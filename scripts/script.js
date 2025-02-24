@@ -174,6 +174,12 @@ function initAnim() {
 
 }
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    var cursor = new MouseFollower();
+    initAnim();
+});
+
 function showLoaderIfFontsNotLoaded() {
     const loaderWrapper = document.getElementById('loader-wrapper');
     const hideLoader = () => {
@@ -195,10 +201,6 @@ function showLoaderIfFontsNotLoaded() {
 
 showLoaderIfFontsNotLoaded();
 
-document.addEventListener("DOMContentLoaded", () => {
-    var cursor = new MouseFollower();
-    initAnim();
-});
 
 // Transitions Related Code
 
