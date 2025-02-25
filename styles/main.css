@@ -81,6 +81,35 @@ body {
     animation: 1.5s cubic-bezier(0.87,0,0.13,1) both movein;
 }
 
+/* Firefox Compatibility */
+@-moz-keyframes moveout {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-35%);
+    }
+}
+
+@-moz-keyframes movein {
+    from {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    to {
+        clip-path: polygon(0% 100%,100% 100%,100% 0%,0% 0%);
+    }
+}
+
+::-moz-view-transition-old(root) {
+    animation: 1.5s cubic-bezier(0.87,0,0.13,1) both moveout;
+}
+
+::-moz-view-transition-new(root) {
+    animation: 1.5s cubic-bezier(0.87,0,0.13,1) both movein;
+}
+
 
 
 /* Fixed Style Items */
